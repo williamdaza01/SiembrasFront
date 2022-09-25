@@ -1,1 +1,8 @@
-<p>ver-municipios works!</p>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Municipios
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2" *ngFor="let data of municipiosList">
+      <button class="dropdown-item" type="button">{{data.nombre}}</button>
+    </div>
+  </div>
