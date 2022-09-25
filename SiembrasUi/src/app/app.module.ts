@@ -16,6 +16,9 @@ import { VerSiembrasComponent } from './siembras/ver-siembras/ver-siembras.compo
 import { EditarSiembrasComponent } from './siembras/editar-siembras/editar-siembras.component';
 import { ServicioDbpyService } from './servicio-dbpy.service';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,10 @@ import { ServicioDbpyService } from './servicio-dbpy.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ServicioDbpyService],
   bootstrap: [AppComponent]
