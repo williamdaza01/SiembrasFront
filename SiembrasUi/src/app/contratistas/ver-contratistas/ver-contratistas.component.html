@@ -1,1 +1,7 @@
-<p>ver-contratistas works!</p>
+<div class="comboBox">
+    <select name="" id="">
+        <option *ngFor="let data of contratistasList" [value]="data">
+            {{data.nombre}}
+        </option>
+    </select>   
+</div>
