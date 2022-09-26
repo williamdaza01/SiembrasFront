@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioDbpyService } from 'src/app/servicio-dbpy.service';
 
 @Component({
   selector: 'app-ver-veredas',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerVeredasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ServicioDbpyService) { }
+
+  veredasList:any = [];
 
   ngOnInit(): void {
+    this.verVeredas();
+  }
+
+  verVeredas(){
+    this.service.getVeredasList().subscribe( data => {
+      this.veredasList = data;
+    })
   }
 
 }

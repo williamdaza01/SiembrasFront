@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioDbpyService } from 'src/app/servicio-dbpy.service';
 
 @Component({
   selector: 'app-ver-arboles',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerArbolesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ServicioDbpyService) { }
+
+  arbolesList:any = [];
 
   ngOnInit(): void {
+    this.verArboles();
   }
 
+
+  verArboles(){
+    this.service.getArbolesList().subscribe( data => {
+      this.arbolesList = data;
+    })
+  }
 }

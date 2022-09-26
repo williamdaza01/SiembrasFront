@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioDbpyService } from 'src/app/servicio-dbpy.service';
 
 @Component({
   selector: 'app-ver-contratistas',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerContratistasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ServicioDbpyService) { }
+
+  contratistasList:any = [];
 
   ngOnInit(): void {
+    this.verContratistas();
+  }
+
+  verContratistas(){
+    this.service.getContratistasList().subscribe( data => {
+      this.contratistasList = data;
+    })
   }
 
 }
