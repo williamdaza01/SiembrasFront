@@ -1,5 +1,29 @@
-<app-municipios></app-municipios>
-<app-veredas></app-veredas>
-<app-contratistas></app-contratistas>
-<app-arboles></app-arboles>
+<div class="d-flex justify-content-center">
+  <h1>Siembras Corantioquia</h1>
+</div>
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <div class="row">
+      <div class="dropdown">
+        <div class="comboBox">
+          <app-municipios></app-municipios>
+        </div>
+        <div class="comboBox">
+          <app-veredas></app-veredas>
+        </div>
+        <div class="comboBox">
+          <app-contratistas></app-contratistas>
+        </div>
+        <div class="comboBox">
+          <app-arboles></app-arboles>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="table">
+          <app-siembras></app-siembras>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
