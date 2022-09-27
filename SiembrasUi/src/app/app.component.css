@@ -1,0 +1,14 @@
+.comboBox {
+    display: inline-flex;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.dropdown {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 100px;
+}
