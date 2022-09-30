@@ -1,6 +1,6 @@
 <div>
-    <select name="" id="">
-        <option *ngFor="let data of contratistasList" [value]="data">
+    <select name="selector" #mydata (change)="getId(mydata.value)">
+        <option *ngFor="let data of contratistasList" [value]="data.codigo">
             {{data.nombre}}
         </option>
     </select>   

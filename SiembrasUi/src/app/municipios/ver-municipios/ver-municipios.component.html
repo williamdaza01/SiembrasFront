@@ -1,7 +1,8 @@
 <div>
-    <select name="" id="">
-        <option *ngFor="let data of municipiosList" [value]="data">
-            {{data.nombre}}
+    <select name="selector" #mydata (change)="getId(mydata.value)">
+        <option id="mpio" *ngFor="let data of municipiosList" 
+        [value]="data.codigo" >
+            {{data.nombre}}        
         </option>
     </select>   
 </div>
