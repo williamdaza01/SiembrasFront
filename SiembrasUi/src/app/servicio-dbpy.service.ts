@@ -31,11 +31,13 @@ export class ServicioDbpyService {
   }
 
   postSiembrasList(val:any):Observable<any[]> {
-    return this.http.post<any[]>(this.APIurl + '/siembras',val);
+    return this.http.post<any[]>(this.APIurl + 'siembras/',val);
   }
 
   putSiembrasList(val:any):Observable<any[]> {
-    return this.http.put<any[]>(this.APIurl + '/siembras',val);
+    console.log(val);
+    
+    return this.http.put<any[]>(this.APIurl + 'siembras/', val);
   }
 
   deleteSiembrasList(val:any):Observable<any[]> {
