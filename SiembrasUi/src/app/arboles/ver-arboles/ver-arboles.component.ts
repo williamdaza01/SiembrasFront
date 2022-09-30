@@ -22,4 +22,10 @@ export class VerArbolesComponent implements OnInit {
       this.arbolesList = data;
     })
   }
+
+  getId(value:string){
+    let id;
+    id = value;
+    return id;
+  }
 }

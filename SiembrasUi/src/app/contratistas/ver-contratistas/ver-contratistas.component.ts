@@ -22,4 +22,10 @@ export class VerContratistasComponent implements OnInit {
     })
   }
 
+  getId(value:string){
+    let id;
+    id = value;
+    return id;
+  }
+
 }

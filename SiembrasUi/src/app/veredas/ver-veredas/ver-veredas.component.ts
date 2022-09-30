@@ -11,6 +11,7 @@ export class VerVeredasComponent implements OnInit {
   constructor(private service:ServicioDbpyService) { }
 
   veredasList:any = [];
+  id:number = 0;
 
   ngOnInit(): void {
     this.verVeredas();
@@ -21,5 +22,11 @@ export class VerVeredasComponent implements OnInit {
       this.veredasList = data;
     })
   }
+
+  getCity(value:string){
+    this.id = Number(value);
+    return this.id;
+  }
+
 
 }

@@ -11,7 +11,7 @@ export class VerMunicipiosComponent implements OnInit {
   constructor(private service:ServicioDbpyService) { }
 
   municipiosList:any = [];
-
+  
   ngOnInit(): void {
     this.verMunicipios();
   }
@@ -19,7 +19,12 @@ export class VerMunicipiosComponent implements OnInit {
   verMunicipios(){
     this.service.getMunicipiosList().subscribe( data => {
       this.municipiosList = data;
-    })
+    });
   }
-
+  
+  getId(value:string){
+    let id;
+    id = value;
+    return id;
+  }
 }
